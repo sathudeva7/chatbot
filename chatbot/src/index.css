@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.editor-container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 10px;
+  border: 1px solid rgb(178, 175, 175);
+  min-width: 400px;
+}
+
+.container {
+  display: flex;
+  gap: 20px; /* Adds space between columns */
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.icon-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    border-radius: 18px;
+    cursor: grab;
+    margin-right: 7px;
+
+}
+
+.simple-image img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
