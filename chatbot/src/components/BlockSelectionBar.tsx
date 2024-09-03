@@ -13,7 +13,37 @@ export default function BlockSelectionBar({ editorInstance }) {
           style: "unordered",
           items: [
             {
-              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div>`,
+              content: `<div class="flex"><div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>What is your Email?</div></div>`,
+              items: [{ content: "Email" }],
+            },
+          ],
+        });
+      } else if (type == "form") {
+        editorInstance.blocks.insert("form", {
+          style: "unordered",
+          items: [
+            {
+              content: `<div class="flex"><div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>Finally, could we get your contact details?</div></div>`,
+              items: [{ content: "Name" }, { content: "Email" }, { content: "Phone" }, { content: "Message" }],
+            },
+          ],
+        });
+      } else if (type == "select_one") {
+        editorInstance.blocks.insert("select", {
+          style: "ordered",
+          items: [
+            {
+              content: `<div class="flex"><div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div></div>`,
+              items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
+            },
+          ],
+        });
+      } else if (type == "select_multiple") {
+        editorInstance.blocks.insert("multiSelect", {
+          style: "ordered",
+          items: [
+            {
+              content: `<div class="flex"><div class="bg-[#9a59b5] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/list.svg" /></div>How are you?</div></div>`,
               items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
             },
           ],
@@ -50,7 +80,7 @@ export default function BlockSelectionBar({ editorInstance }) {
       </div>
 
       <div
-        onClick={() => addNewBlock("question")}
+        onClick={() => addNewBlock("form")}
         className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left"
       >
         <div className="bg-[#9bbb3f] icon-class">
@@ -63,7 +93,7 @@ export default function BlockSelectionBar({ editorInstance }) {
       </div>
 
       <div
-        onClick={() => addNewBlock("question")}
+        onClick={() => addNewBlock("select_one")}
         className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left"
       >
         <div className="bg-[#3598db] icon-class">
@@ -76,7 +106,7 @@ export default function BlockSelectionBar({ editorInstance }) {
       </div>
 
       <div
-        onClick={() => addNewBlock("question")}
+        onClick={() => addNewBlock("select_multiple")}
         className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left"
       >
         <div className="bg-[#9a59b5] icon-class">
