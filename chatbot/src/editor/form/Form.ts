@@ -25,7 +25,8 @@ export default class Form extends NestedList{
 			 {
 			   content: `<div class="flex"><div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>What's your email?</div>`,
 			   items: [
-				{"content": "Email"}
+				{"content": "Email"},
+				{"content":"Password"}
 			   ],
 			 },
 		    ],
