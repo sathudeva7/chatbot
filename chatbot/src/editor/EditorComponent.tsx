@@ -11,6 +11,7 @@ import MultiSelect from "./multi-select/MultiSelect";
 import Form from "./form/Form";
 import Statement from "./statement/Statement";
 import SiteSearch from "./site-search/SiteSearch";
+import DragDrop from "editorjs-drag-drop";
 
 class SimpleImage {
   static get toolbox() {
@@ -108,6 +109,7 @@ const EditorComponent = ({ onInitialize }) => {
       onReady: () => {
         ejInstance.current = editor;
         onInitialize(ejInstance.current);
+        new DragDrop(editor);
       },
       autofocus: true,
       data: DEFAULT_INITIAL_DATA,
