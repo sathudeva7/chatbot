@@ -54,6 +54,7 @@ export default function Chatbot() {
                       {block.data.caption && <p>{block.data.caption}</p>}
                     </div>
                   )}
+
                   {block.type === "form" && (
                     <>
                       <div className="flex">
@@ -207,12 +208,98 @@ export default function Chatbot() {
                   )}
 
 
+                  {block.type === "faq" && (
+                    <>
+                      <div className="flex">
+                        <img
+                          src="https://via.placeholder.com/50"
+                          alt="User"
+                          className="w-12 h-12 rounded-full mr-2"
+                        />
+                        <p
+                          className="text-black bg-gray-200 p-2 rounded-lg my-2"
+                          dangerouslySetInnerHTML={createMarkup(
+                            block.data?.content
+                          )}
+                        ></p>
+                      </div>
+                      {console.log(block.data?.content)},
+
+
+                      <div className="border rounded-md p-2 bg-white rounded-[20px] mb-4">
+                        <div className="relative flex items-center mb-4">
+                          <input
+                            type="text"
+                            placeholder="Search here"
+                            className="w-full px-4 py-2 pr-10 text-gray-700 bg-transparent border border-stroke dark:border-dark-3 rounded-md focus:outline-none focus:border-primary"
+                          />
+                          <button className="absolute right-3 text-gray-500 flex items-center justify-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2}
+                              stroke="currentColor"
+                              className="w-5 h-5"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <button className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium w-full">
+                          Submit
+                        </button>
+                      </div>
+                    </>
+                  )}
+
+
+                  {block.type === "file" && (
+                    <>
+                      <div className="flex">
+                        <img
+                          src="https://via.placeholder.com/50"
+                          alt="User"
+                          className="w-12 h-12 rounded-full mr-2"
+                        />
+                        <p
+                          className="text-black bg-gray-200 p-2 rounded-lg my-2"
+                          dangerouslySetInnerHTML={createMarkup(block.data?.content)}
+                        ></p>
+                      </div>
+
+                      <div className="border rounded-md p-2 bg-white rounded-[20px] mb-4">
+                        <div className="flex flex-col space-y-2 mt-4">
+                          <label
+                            htmlFor="file-upload"
+                            className="bg-gray-200 border border-stroke rounded-md py-2 px-4 text-sm text-gray-700 cursor-pointer flex items-center justify-center"
+                          >
+                            <input
+                              id="file-upload"
+                              type="file"
+                              className="hidden"
+                            />
+                            Upload File
+                          </label>
+                          <button className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium w-full">
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+
 
                   {/* Add other block types here */}
                 </div>
               ))}
             </div>
-            <div className="mt-8 text-center text-white text-sm">
+            <div className="mt-8 text-center text-white text-sm mt-[420px] ">
               <span>by</span>
               <span className="font-bold">serviceform</span>
             </div>
