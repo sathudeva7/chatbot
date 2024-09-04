@@ -68,11 +68,28 @@ const EditorComponent = ({ onInitialize }) => {
           config: {
             defaultStyle: "ordered",
           },
+
         },
         siteSearch: {
           class: SiteSearch,
           inlineToolbar: true,
         },
+
+        calender: {
+          class: Statement,
+        },
+
+        faq: {
+          class: Statement,
+          inlineToolbar: true,
+         
+        },
+        fileupload: {
+          class: Statement,
+          inlineToolbar: true,
+         
+        },
+
         image: {
           class: SimpleImage,
           inlineToolbar: true,
