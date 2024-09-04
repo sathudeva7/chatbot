@@ -171,13 +171,43 @@ export default function Chatbot() {
                       {console.log(block.data?.items[0]?.items)}
                       <div>
                         {block.data?.items[0]?.items.length > 0 && (
-                          <MultiSelect
-                            colourOptions={block.data?.items[0]?.items}
-                          />
+                          <MultiSelect colourOptions={block.data?.items[0]?.items} />
                         )}
                       </div>
                     </>
                   )}
+
+                  {block.type === "calender" && (
+                    <>
+                      <div className="flex">
+                        <img
+                          src="https://via.placeholder.com/50"
+                          alt="User"
+                          className="w-12 h-12 rounded-full mr-2"
+                        />
+                        <p
+                          className="text-black bg-gray-200 p-2 rounded-lg my-2"
+                          dangerouslySetInnerHTML={createMarkup(
+                            block.data?.text
+                          )}
+                        ></p>
+                      </div>
+                      {/* <div>
+                        {block.data?.items[0]?.items.length > 0 &&
+                          block?.data?.items[0]?.items.map((item) => (
+                            <button
+                              key={item.content}
+                              className="bg-[#1e306d] border-dark dark:border-dark-2 border rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5"
+                            >
+                              {item?.content}
+                            </button>
+                          ))}
+                      </div> */}
+                    </>
+                  )}
+
+
+
                   {/* Add other block types here */}
                 </div>
               ))}
