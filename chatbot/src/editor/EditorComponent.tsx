@@ -67,7 +67,13 @@ const EditorComponent = ({onInitialize}) => {
           config: {
             defaultStyle: 'ordered'
           },
+
         },
+
+        calender: {
+          class: Statement,
+        },
+        
         image: {
           class: SimpleImage,
           inlineToolbar: true,
