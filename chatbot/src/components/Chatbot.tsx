@@ -5,12 +5,12 @@ import MultiSelect from "./MultiSelect";
 export default function Chatbot() {
   const { content } = useContext(EditorContext);
   const [isVisible, setIsVisible] = useState(true); // Initially visible
-  
+
 
   const createMarkup = (html) => ({ __html: html });
 
 
-  
+
 
 
 
@@ -154,46 +154,46 @@ export default function Chatbot() {
                       </div>
                     </>
                   )}
-{block.type === "calender" && (
-  <>
-    <div className="flex">
-      <img
-        src="https://via.placeholder.com/50"
-        alt="User"
-        className="w-12 h-12 rounded-full mr-2"
-      />
-      <div className="text-black bg-gray-200 p-2 rounded-lg my-2 flex items-center w-[220px] ">
-        <input
-          type="text"
-          id="date-picker"
-          placeholder="dd/mm/yyyy"
-          className="border p-2 rounded-md"
-          onFocus={(e) => (e.target.type = "date")}
-          onBlur={(e) => (e.target.type = "text")}
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="w-6 h-6 ml-2 cursor-pointer"
-          onClick={() => document.getElementById('date-picker').focus()}
-        >
-         
-        </svg>
-      </div>
-    </div>
+                  {block.type === "calender" && (
+                    <>
+                      <div className="flex">
+                        <img
+                          src="https://via.placeholder.com/50"
+                          alt="User"
+                          className="w-12 h-12 rounded-full mr-2"
+                        />
+                        <div className="text-black bg-gray-200 p-2 rounded-lg my-2 flex items-center w-[220px] ">
+                          <input
+                            type="text"
+                            id="date-picker"
+                            placeholder="dd/mm/yyyy"
+                            className="border p-2 rounded-md"
+                            onFocus={(e) => (e.target.type = "date")}
+                            onBlur={(e) => (e.target.type = "text")}
+                          />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            className="w-6 h-6 ml-2 cursor-pointer"
+                            onClick={() => document.getElementById('date-picker').focus()}
+                          >
 
-    <div className="p-2 mb-4">
-      <div className="flex space-x-4 justify-center mt-4">
-        <button className="bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium ml-[220px] mt-[-20px] ">
-          Submit
-        </button>
-      </div>
-    </div>
-  </>
-)}
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div className="p-2 mb-4">
+                        <div className="flex space-x-4 justify-center mt-4">
+                          <button className="bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-medium ml-[220px] mt-[-20px]  hover:scale-105">
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </>
+                  )}
 
 
 
@@ -243,7 +243,7 @@ export default function Chatbot() {
                             </svg>
                           </button>
                         </div>
-                        <button className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium w-full">
+                        <button className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium w-full  hover:scale-105 ">
                           Submit
                         </button>
                       </div>
@@ -269,7 +269,7 @@ export default function Chatbot() {
                         <div className="flex space-x-4 justify-center mt-4">
                           <label
                             htmlFor="file-upload"
-                            className="bg-blue-700 text-white py-2 px-4 rounded-full flex items-center cursor-pointer"
+                            className="bg-blue-900 text-white py-2 px-4 rounded-full flex items-center cursor-pointer hover:scale-105 "
                           >
                             <input id="file-upload" type="file" className="hidden" />
                             <svg
@@ -288,13 +288,64 @@ export default function Chatbot() {
                             </svg>
                             Upload file
                           </label>
-                          <button className="bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium">
+                          <button className="bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-medium  hover:scale-105">
                             Submit
                           </button>
                         </div>
                       </div>
                     </>
                   )}
+
+
+                  {block.type === "search" && (
+                    <>
+                      <div className="flex">
+                        <img
+                          src="https://via.placeholder.com/50"
+                          alt="User"
+                          className="w-12 h-12 rounded-full mr-2"
+                        />
+                        <p
+                          className="text-black bg-gray-200 p-2 rounded-lg my-2"
+                          dangerouslySetInnerHTML={createMarkup(
+                            block.data?.text
+                          )}
+                        ></p>
+                      </div>
+                      {console.log(block.data?.content)},
+
+
+                      <div className="border rounded-md p-2 bg-white rounded-[20px] mb-4">
+                        <div className="relative flex items-center mb-4">
+                          <input
+                            type="text"
+                            placeholder="Search here"
+                            className="w-full px-4 py-2 pr-10 text-gray-700 bg-transparent border border-stroke dark:border-dark-3 rounded-md focus:outline-none focus:border-primary"
+                          />
+                          <button className="absolute right-3 text-gray-500 flex items-center justify-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2}
+                              stroke="currentColor"
+                              className="w-5 h-5"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <button className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium w-full  hover:scale-105 ">
+                          Submit
+                        </button>
+                      </div>
+                    </>
+                  )}
+
 
 
 

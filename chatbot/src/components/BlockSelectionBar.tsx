@@ -45,7 +45,7 @@ export default function BlockSelectionBar({ editorInstance }) {
       }
 
       else if (type == "search") {
-        editorInstance.blocks.insert("form", {
+        editorInstance.blocks.insert("faq", {
           style: "unordered",
           items: [
             {
@@ -108,7 +108,7 @@ export default function BlockSelectionBar({ editorInstance }) {
     <>
       <div
         onClick={() => addNewBlock("statement")}
-        className=" bg-[#f6f6f6] mb-2 w-full flex p-2 rounded-md text-left rounded-[50px] "
+        className=" bg-[#f6f6f6] mb-2 w-full flex p-2 rounded-md text-left rounded-[60px] "
       >
         <div style={{width : '24px', height: '24px', borderRadius: '18px', display: 'flex', justifyContent: 'center', alignItems: 'center', }} className="bg-[#2bc7a7] icon-class">
           <img
@@ -121,7 +121,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("question")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px]"
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px]"
       >
         <div className="bg-[#9bbb3f] icon-class">
           <img
@@ -134,7 +134,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("form")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#9bbb3f] icon-class">
           <img
@@ -147,7 +147,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("selectone")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#3598db] icon-class">
           <img
@@ -160,7 +160,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("selectone")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#9a59b5] icon-class">
           <img
@@ -173,7 +173,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("search")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[black] icon-class">
           <img
@@ -186,7 +186,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("ai")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#E97451] icon-class">
           <img
@@ -199,7 +199,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("file")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#CC5500] icon-class">
           <img
@@ -212,7 +212,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("calender")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[purple] icon-class">
           <img
@@ -225,7 +225,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("faq")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#2bc7b9] icon-class">
           <img
