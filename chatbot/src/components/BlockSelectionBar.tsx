@@ -67,7 +67,7 @@ export default function BlockSelectionBar({ editorInstance }) {
       }
 
       else if (type == "file") {
-        editorInstance.blocks.insert("form", {
+        editorInstance.blocks.insert("file", {
           style: "unordered",
           items: [
             {
@@ -79,12 +79,12 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       else if (type == "calender") {
         editorInstance.blocks.insert("calender", {
-          text: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`
-          // items: [
-          //   {
-          //     content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`,
-          //   },
-          // ],
+          // text: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`
+          items: [
+            {
+              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`,
+            },
+          ],
         });
       }
 

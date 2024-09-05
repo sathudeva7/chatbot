@@ -10,6 +10,10 @@ import SelectOne from './select-one/SelectOne';
 import MultiSelect from './multi-select/MultiSelect';
 import Form from './form/Form';
 import Statement from './statement/Statement';
+import File from './file/File';
+import Calendar from './calender/Calender';
+
+
 
 class SimpleImage {
 	static get toolbox() {
@@ -71,7 +75,7 @@ const EditorComponent = ({onInitialize}) => {
         },
 
         calender: {
-          class: Statement,
+          class: Calendar,
         },
 
         faq: {
@@ -79,8 +83,8 @@ const EditorComponent = ({onInitialize}) => {
           inlineToolbar: true,
          
         },
-        fileupload: {
-          class: Statement,
+        file: {
+          class: File,
           inlineToolbar: true,
          
         },

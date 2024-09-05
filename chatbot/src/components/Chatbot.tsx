@@ -5,8 +5,14 @@ import MultiSelect from "./MultiSelect";
 export default function Chatbot() {
   const { content } = useContext(EditorContext);
   const [isVisible, setIsVisible] = useState(true); // Initially visible
+  
 
   const createMarkup = (html) => ({ __html: html });
+
+
+  
+
+
 
   return (
 
@@ -148,35 +154,51 @@ export default function Chatbot() {
                       </div>
                     </>
                   )}
+{block.type === "calender" && (
+  <>
+    <div className="flex">
+      <img
+        src="https://via.placeholder.com/50"
+        alt="User"
+        className="w-12 h-12 rounded-full mr-2"
+      />
+      <div className="text-black bg-gray-200 p-2 rounded-lg my-2 flex items-center w-[220px] ">
+        <input
+          type="text"
+          id="date-picker"
+          placeholder="dd/mm/yyyy"
+          className="border p-2 rounded-md"
+          onFocus={(e) => (e.target.type = "date")}
+          onBlur={(e) => (e.target.type = "text")}
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="w-6 h-6 ml-2 cursor-pointer"
+          onClick={() => document.getElementById('date-picker').focus()}
+        >
+         
+        </svg>
+      </div>
+    </div>
 
-                  {block.type === "calender" && (
-                    <>
-                      <div className="flex">
-                        <img
-                          src="https://via.placeholder.com/50"
-                          alt="User"
-                          className="w-12 h-12 rounded-full mr-2"
-                        />
-                        <p
-                          className="text-black bg-gray-200 p-2 rounded-lg my-2"
-                          dangerouslySetInnerHTML={createMarkup(
-                            block.data?.text
-                          )}
-                        ></p>
-                      </div>
-                      {/* <div>
-                        {block.data?.items[0]?.items.length > 0 &&
-                          block?.data?.items[0]?.items.map((item) => (
-                            <button
-                              key={item.content}
-                              className="bg-[#1e306d] border-dark dark:border-dark-2 border rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5"
-                            >
-                              {item?.content}
-                            </button>
-                          ))}
-                      </div> */}
-                    </>
-                  )}
+    <div className="p-2 mb-4">
+      <div className="flex space-x-4 justify-center mt-4">
+        <button className="bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium ml-[220px] mt-[-20px] ">
+          Submit
+        </button>
+      </div>
+    </div>
+  </>
+)}
+
+
+
+
+
 
 
                   {block.type === "faq" && (
@@ -190,7 +212,7 @@ export default function Chatbot() {
                         <p
                           className="text-black bg-gray-200 p-2 rounded-lg my-2"
                           dangerouslySetInnerHTML={createMarkup(
-                            block.data?.content
+                            block.data?.text
                           )}
                         ></p>
                       </div>
@@ -243,26 +265,37 @@ export default function Chatbot() {
                         ></p>
                       </div>
 
-                      <div className="border rounded-md p-2 bg-white rounded-[20px] mb-4">
-                        <div className="flex flex-col space-y-2 mt-4">
+                      <div className=" p-2 mb-4">
+                        <div className="flex space-x-4 justify-center mt-4">
                           <label
                             htmlFor="file-upload"
-                            className="bg-gray-200 border border-stroke rounded-md py-2 px-4 text-sm text-gray-700 cursor-pointer flex items-center justify-center"
+                            className="bg-blue-700 text-white py-2 px-4 rounded-full flex items-center cursor-pointer"
                           >
-                            <input
-                              id="file-upload"
-                              type="file"
-                              className="hidden"
-                            />
-                            Upload File
+                            <input id="file-upload" type="file" className="hidden" />
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2}
+                              stroke="currentColor"
+                              className="w-5 h-5 mr-2"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M15.172 7l-6.586 6.586M7 7h10v10"
+                              />
+                            </svg>
+                            Upload file
                           </label>
-                          <button className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium w-full">
+                          <button className="bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium">
                             Submit
                           </button>
                         </div>
                       </div>
                     </>
                   )}
+
 
 
 
