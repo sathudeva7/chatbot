@@ -49,7 +49,7 @@ export default function BlockSelectionBar({ editorInstance }) {
           style: "unordered",
           items: [
             {
-              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div>`,
+              content: `<div class="flex"><div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div></div>`,
               items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
             },
           ],
@@ -61,7 +61,7 @@ export default function BlockSelectionBar({ editorInstance }) {
           style: "unordered",
           items: [
             {
-              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div>`,
+              content: `<div class="flex"><div class="bg-[#9a59b5] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/list.svg" /></div>How are you?</div></div>`,
               items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
             },
           ],

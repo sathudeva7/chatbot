@@ -254,7 +254,7 @@ export default function Chatbot() {
                         <p
                           className="text-black bg-gray-200 p-2 rounded-lg my-2"
                           dangerouslySetInnerHTML={createMarkup(
-                            block.data?.content
+                            block.data?.text
                           )}
                         ></p>
                       </div>
