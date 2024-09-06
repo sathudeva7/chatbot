@@ -12,6 +12,10 @@ import Form from "./form/Form";
 import Statement from "./statement/Statement";
 import SiteSearch from "./site-search/SiteSearch";
 import DragDrop from "editorjs-drag-drop";
+import File from "./file/File";
+import Calendar from "./calender/Calender";
+import Faq from "./faq/Faq";
+import AiComponent from "./ai/AiComponent";
 
 class SimpleImage {
   static get toolbox() {
@@ -69,7 +73,6 @@ const EditorComponent = ({ onInitialize }) => {
           config: {
             defaultStyle: "ordered",
           },
-
         },
         siteSearch: {
           class: SiteSearch,
@@ -77,18 +80,20 @@ const EditorComponent = ({ onInitialize }) => {
         },
 
         calender: {
-          class: Statement,
+          class: Calendar,
+        },
+
+        ai: {
+          class: AiComponent,
         },
 
         faq: {
-          class: Statement,
+          class: Faq,
           inlineToolbar: true,
-         
         },
-        fileupload: {
-          class: Statement,
+        file: {
+          class: File,
           inlineToolbar: true,
-         
         },
 
         image: {

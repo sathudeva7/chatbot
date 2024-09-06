@@ -13,37 +13,7 @@ export default function BlockSelectionBar({ editorInstance }) {
           style: "unordered",
           items: [
             {
-              content: `<div class="flex"><div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>What is your Email?</div></div>`,
-              items: [{ content: "Email" }],
-            },
-          ],
-        });
-      } else if (type == "form") {
-        editorInstance.blocks.insert("form", {
-          style: "unordered",
-          items: [
-            {
-              content: `<div class="flex"><div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>Finally, could we get your contact details?</div></div>`,
-              items: [{ content: "Name" }, { content: "Email" }, { content: "Phone" }, { content: "Message" }],
-            },
-          ],
-        });
-      } else if (type == "select_one") {
-        editorInstance.blocks.insert("select", {
-          style: "ordered",
-          items: [
-            {
-              content: `<div class="flex"><div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div></div>`,
-              items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
-            },
-          ],
-        });
-      } else if (type == "select_multiple") {
-        editorInstance.blocks.insert("multiSelect", {
-          style: "ordered",
-          items: [
-            {
-              content: `<div class="flex"><div class="bg-[#9a59b5] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/list.svg" /></div>How are you?</div></div>`,
+              content: `<div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>How are you?</div>`,
               items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
             },
           ],
@@ -55,14 +25,14 @@ export default function BlockSelectionBar({ editorInstance }) {
           style: "unordered",
           items: [
             {
-              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Finally, could we get your contact details?</div>`,
+              content: `<div class="bg-[#9bbb3f] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/text.svg" /></div>Finally, could we get your contact details?</div>`,
               items: [{ content: "Name" }, { content: "Email" }],
             },
           ],
         });
       }
 
-      else if (type == "selectone") {
+      else if (type == "form") {
         editorInstance.blocks.insert("form", {
           style: "unordered",
           items: [
@@ -74,20 +44,42 @@ export default function BlockSelectionBar({ editorInstance }) {
         });
       }
 
-      else if (type == "search") {
+      else if (type == "select_one") {
         editorInstance.blocks.insert("form", {
           style: "unordered",
           items: [
             {
-              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Search anything from this website.</div>`,
+              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div>`,
+              items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
+            },
+          ],
+        });
+      }
+
+      else if (type == "select_multiple") {
+        editorInstance.blocks.insert("multiSelect", {
+          style: "unordered",
+          items: [
+            {
+              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>How are you?</div>`,
+              items: [{ content: "I'm good thanks!" }, { content: "No thanks" }],
+            },
+          ],
+        });
+      }
+
+      else if (type == "siteSearch") {
+        editorInstance.blocks.insert("siteSearch", {
+          items: [
+            {
+              content: `<div class="bg-[#2bc7b9] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/faq.svg" /></div>Search anything from this website.</div>`,
             },
           ],
         });
       }
 
       else if (type == "ai") {
-        editorInstance.blocks.insert("form", {
-          style: "unordered",
+        editorInstance.blocks.insert("ai", {
           items: [
             {
               content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Asking AI for information</div>`,
@@ -97,7 +89,7 @@ export default function BlockSelectionBar({ editorInstance }) {
       }
 
       else if (type == "file") {
-        editorInstance.blocks.insert("form", {
+        editorInstance.blocks.insert("file", {
           style: "unordered",
           items: [
             {
@@ -109,24 +101,18 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       else if (type == "calender") {
         editorInstance.blocks.insert("calender", {
-          text: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`
-          // items: [
-          //   {
-          //     content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`,
-          //   },
-          // ],
+          // text: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`
+          items: [
+            {
+              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Choose a date</div>`,
+            },
+          ],
         });
       }
 
       else if (type == "faq") {
         editorInstance.blocks.insert("faq", {
-          style: "unordered",
-          
-          items: [
-            {
-              content: `<div class="bg-[#3598db] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/task-square.svg" /></div>Please upload a file</div>`,
-            },
-          ],
+              text: `<div class="flex"><div class="bg-[#2bc7b9] icon-class"><img style="width: 13px;" src="https://dash.serviceform.com/images/icons/flow/faq.svg" /></div>Search anything from this website.</div></div>`,
         });
       }
 
@@ -138,7 +124,7 @@ export default function BlockSelectionBar({ editorInstance }) {
     <>
       <div
         onClick={() => addNewBlock("statement")}
-        className=" bg-[#f6f6f6] mb-2 w-full flex p-2 rounded-md text-left rounded-[50px] "
+        className=" bg-[#f6f6f6] mb-2 w-full flex p-2 rounded-md text-left rounded-[60px] "
       >
         <div style={{width : '24px', height: '24px', borderRadius: '18px', display: 'flex', justifyContent: 'center', alignItems: 'center', }} className="bg-[#2bc7a7] icon-class">
           <img
@@ -151,7 +137,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("question")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px]"
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px]"
       >
         <div className="bg-[#9bbb3f] icon-class">
           <img
@@ -164,7 +150,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("form")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#9bbb3f] icon-class">
           <img
@@ -177,7 +163,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("select_one")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left"
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#3598db] icon-class">
           <img
@@ -190,7 +176,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("select_multiple")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left"
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#9a59b5] icon-class">
           <img
@@ -202,8 +188,8 @@ export default function BlockSelectionBar({ editorInstance }) {
       </div>
 
       <div
-        onClick={() => addNewBlock("search")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        onClick={() => addNewBlock("siteSearch")}
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[black] icon-class">
           <img
@@ -216,7 +202,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("ai")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#E97451] icon-class">
           <img
@@ -229,7 +215,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("file")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#CC5500] icon-class">
           <img
@@ -242,7 +228,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("calender")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[purple] icon-class">
           <img
@@ -255,7 +241,7 @@ export default function BlockSelectionBar({ editorInstance }) {
 
       <div
         onClick={() => addNewBlock("faq")}
-        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[50px] "
+        className="bg-[#f6f6f6] mb-2 w-full rounded-md flex p-2 text-left rounded-[60px] "
       >
         <div className="bg-[#2bc7b9] icon-class">
           <img
