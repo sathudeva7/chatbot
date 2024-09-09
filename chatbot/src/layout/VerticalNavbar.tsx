@@ -75,7 +75,7 @@ export default function Verticalbar() {
                             >
                               {subItem.name}
                             </DisclosureButton>
-                          </li>
+                          </li> 
                         ))}
                       </DisclosurePanel>
                     </Disclosure>

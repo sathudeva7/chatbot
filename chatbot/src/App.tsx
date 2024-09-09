@@ -4,7 +4,9 @@ import Chatbot from "./components/Chatbot";
 
 import EditorComponent from "./editor/EditorComponent";
 import BlockSelectionBar from "./components/BlockSelectionBar";
-import AppLayout from "./layout/AppLayout";
+import { Route, Routes } from 'react-router-dom';
+
+import RouteTable from "./routes/route";
 
 function App() {
   const [editor, setEditor] = useState(null);
@@ -15,6 +17,10 @@ function App() {
 //    <div><EditorComponent /></div>
 //    <div><Chatbot /></div>
 // </div>
+
+
+
+<div>
 <>
 <AppLayout>
 <div className="flex min-h-full ml-20 flex-col">
@@ -39,6 +45,18 @@ function App() {
       </div>
       </AppLayout>
     </>
+
+
+    <RouteTable/>
+
+
+
+  
+
+
+
+
+    </div>
     
   );
 }
