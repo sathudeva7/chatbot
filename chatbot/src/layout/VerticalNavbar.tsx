@@ -10,7 +10,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Design', href: '#', icon: FingerPrintIcon, current: true },
+  { name: 'Design', href: '/design', icon: FingerPrintIcon, current: false },
   { name: 'Flow', href: '#', icon: ShareIcon, current: false },
   { name: 'Popups', href: '#', icon: ChatBubbleLeftIcon, current: false },
   { name: 'Train AI', href: '#', icon: BoltIcon, current: false },

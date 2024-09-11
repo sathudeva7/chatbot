@@ -13,90 +13,125 @@ const Design: React.FC = () => {
   const [privacyPolicyEnabled, setPrivacyPolicyEnabled] = useState<boolean>(false);
 
   return (
-    <div className="chatbot-customizer">
-      <h1>Chatbot Customizer</h1>
+    <div className="flex p-4 space-x-4 ml-[180px] ">
+      {/* Left Column */}
+      <div className="w-1/2 space-y-4">
+        {/* Header Section */}
+        <div className="border p-4 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-2">Header</h2>
+          <div className="flex space-x-2 mb-2">
+            <div className="w-1/2 border h-24 flex items-center justify-center bg-gray-100">Logo</div>
+            <div className="w-1/2 border h-24 flex items-center justify-center bg-gray-100">Avatar</div>
+          </div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Header Color: </label>
+            <input
+              type="color"
+              value={headerColor}
+              onChange={(e) => setHeaderColor(e.target.value)}
+              className="w-1/2"
+            />
+          </div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Refresh Button: </label>
+            <input
+              type="checkbox"
+              checked={refreshButton}
+              onChange={() => setRefreshButton(!refreshButton)}
+            />
+          </div>
+          <div className="flex items-center">
+            <label className="w-1/2">Phone Button: </label>
+            <input
+              type="checkbox"
+              checked={phoneButton}
+              onChange={() => setPhoneButton(!phoneButton)}
+            />
+          </div>
+        </div>
 
-      <section>
-        <h2>Header & Images</h2>
-        <label>Header Color: </label>
-        <input
-          type="color"
-          value={headerColor}
-          onChange={(e) => setHeaderColor(e.target.value)}
-        />
-        <br />
-        <label>Refresh Button: </label>
-        <input
-          type="checkbox"
-          checked={refreshButton}
-          onChange={() => setRefreshButton(!refreshButton)}
-        />
-        <br />
-        <label>Phone Button: </label>
-        <input
-          type="checkbox"
-          checked={phoneButton}
-          onChange={() => setPhoneButton(!phoneButton)}
-        />
-      </section>
+        {/* Bottom Icon & Footer */}
+        <div className="border p-4 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-2">Bottom Icon & Footer</h2>
+          <div className="border h-24 mb-2 flex items-center justify-center bg-gray-100">Icon</div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Background Color: </label>
+            <input
+              type="color"
+              value={iconBackgroundColor}
+              onChange={(e) => setIconBackgroundColor(e.target.value)}
+              className="w-1/2"
+            />
+          </div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Privacy Policy: </label>
+            <input
+              type="checkbox"
+              checked={privacyPolicyEnabled}
+              onChange={() => setPrivacyPolicyEnabled(!privacyPolicyEnabled)}
+            />
+          </div>
+        </div>
+      </div>
 
-      <section>
-        <h2>Buttons & Colors</h2>
-        <label>Button Color: </label>
-        <input
-          type="color"
-          value={buttonColor}
-          onChange={(e) => setButtonColor(e.target.value)}
-        />
-        <br />
-        <label>Button Text Color: </label>
-        <input
-          type="color"
-          value={buttonTextColor}
-          onChange={(e) => setButtonTextColor(e.target.value)}
-        />
-        <br />
-        <label>Button Border Color: </label>
-        <input
-          type="color"
-          value={buttonBorderColor}
-          onChange={(e) => setButtonBorderColor(e.target.value)}
-        />
-        <br />
-        <label>Border Radius: </label>
-        <input
-          type="number"
-          value={borderRadius}
-          onChange={(e) => setBorderRadius(parseInt(e.target.value))}
-        />
-      </section>
+      {/* Right Column */}
+      <div className="w-1/2 space-y-4">
+        {/* Text Area Customization */}
+        <div className="border p-4 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-2">Text Area</h2>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Button Color: </label>
+            <input
+              type="color"
+              value={buttonColor}
+              onChange={(e) => setButtonColor(e.target.value)}
+              className="w-1/2"
+            />
+          </div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Text Color: </label>
+            <input
+              type="color"
+              value={buttonTextColor}
+              onChange={(e) => setButtonTextColor(e.target.value)}
+              className="w-1/2"
+            />
+          </div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Border Color: </label>
+            <input
+              type="color"
+              value={buttonBorderColor}
+              onChange={(e) => setButtonBorderColor(e.target.value)}
+              className="w-1/2"
+            />
+          </div>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Border Radius: </label>
+            <input
+              type="number"
+              value={borderRadius}
+              onChange={(e) => setBorderRadius(parseInt(e.target.value))}
+              className="w-1/2"
+            />
+          </div>
+        </div>
 
-      <section>
-        <h2>Background</h2>
-        <label>Background Color: </label>
-        <input
-          type="color"
-          value={backgroundColor}
-          onChange={(e) => setBackgroundColor(e.target.value)}
-        />
-      </section>
-
-      <section>
-        <h2>Icon & Footer</h2>
-        <label>Icon Background Color: </label>
-        <input
-          type="color"
-          value={iconBackgroundColor}
-          onChange={(e) => setIconBackgroundColor(e.target.value)}
-        />
-        <br />
-        <label>Privacy Policy Enabled: </label>
-        <input
-          type="checkbox"
-          checked={privacyPolicyEnabled}
-          onChange={() => setPrivacyPolicyEnabled(!privacyPolicyEnabled)}
-        />
-      </section>
+        {/* Background Customization */}
+        <div className="border p-4 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-2">Background</h2>
+          <div className="flex items-center mb-2">
+            <label className="w-1/2">Background Color: </label>
+            <input
+              type="color"
+              value={backgroundColor}
+              onChange={(e) => setBackgroundColor(e.target.value)}
+              className="w-1/2"
+            />
+          </div>
+          {/* Add more controls as needed */}
+        </div>
+      </div>
     </div>
   );
 };
