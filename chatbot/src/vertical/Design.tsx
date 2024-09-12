@@ -13,7 +13,7 @@ const Design: React.FC = () => {
   const [privacyPolicyEnabled, setPrivacyPolicyEnabled] = useState<boolean>(false);
 
   return (
-    <div className="flex p-4 space-x-4 ml-[180px] ">
+    <div className="flex p-8 space-x-4 w-[600px] mr-[100px] ">
       {/* Left Column */}
       <div className="w-1/2 space-y-4">
         {/* Header Section */}

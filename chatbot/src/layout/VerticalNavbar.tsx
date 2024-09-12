@@ -24,8 +24,9 @@ function classNames(...classes) {
 
 export default function Verticalbar() {
   return (
-    <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 h-[680px] ">
-     
+<div
+  className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 h-[680px]" style={{ borderLeft: '1px solid white', borderRight: '1px solid gray' }}
+>     
       <nav className="flex flex-1 flex-col">
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
           <li>
