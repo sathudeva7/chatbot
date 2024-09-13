@@ -33,6 +33,10 @@ const StatementForm = () => {
     setActionsVisible(false); // Hide the action list after selection
   };
 
+
+
+  
+
   return (
     <div className="w-full max-w-sm mx-auto p-6 border rounded-lg shadow-sm bg-white relative">
       <h2 className="text-lg font-semibold mb-4">Statement</h2>
@@ -49,6 +53,31 @@ const StatementForm = () => {
           <option value="">Stop</option>
           <option value="">Send lead and continue</option>
         </select>
+      </div>
+
+
+      <div className="mb-4">
+        <label htmlFor="btn-text" className="block text-sm font-medium mb-1">
+          Flex space
+        </label>
+        <input
+          type="text"
+          id="btn-text"
+          placeholder="eg. 4m34kl23i4km4"
+          className="w-full border border-gray-300 rounded-md p-2"
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="btn-text" className="block text-sm font-medium mb-1">
+          FAQ input placeholder
+        </label>
+        <input
+          type="text"
+          id="btn-text"
+          placeholder="eg. 4m34kl23i4km4"
+          className="w-full border border-gray-300 rounded-md p-2"
+        />
       </div>
 
       {/* Actions */}
@@ -221,156 +250,3 @@ const StatementForm = () => {
 };
 
 export default StatementForm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useRef } from 'react';
-
-// const StatementForm = () => {
-//   // Reference to the hidden file input
-//   const fileInputRef = useRef(null);
-
-//   // Function to trigger file input click
-//   const handleFileButtonClick = () => {
-//     if (fileInputRef.current) {
-//       fileInputRef.current.click();
-//     }
-//   };
-
-//   return (
-//     <div className="w-full max-w-sm mx-auto p-6 border rounded-lg shadow-sm bg-white">
-//       <h2 className="text-lg font-semibold mb-4">Statement</h2>
-
-//       {/* Always jump to */}
-//       <div className="mb-4">
-//         <label htmlFor="jump" className="block text-sm font-medium mb-1">
-//           Always jump to
-//         </label>
-//         <select
-//           id="jump"
-//           className="w-full border border-gray-300 rounded-md p-2"
-//         >
-//           <option value="">Select...</option>
-//           <option value="">No Jump</option>
-//           <option value="">Send lead</option>
-//           <option value="">Stop</option>
-//           <option value="">Send lead and continue</option>
-
-
-
-
-//         </select>
-//       </div>
-
-//       {/* Actions */}
-//       <div className="mb-4">
-//         <button className="w-full bg-blue-600 text-white rounded-md p-2">
-//           Actions (0)
-//         </button>
-//       </div>
-
-//       {/* Button Text */}
-//       <div className="mb-4">
-//         <label htmlFor="btn-text" className="block text-sm font-medium mb-1">
-//           Button text
-//         </label>
-//         <input
-//           type="text"
-//           id="btn-text"
-//           placeholder="eg. next"
-//           className="w-full border border-gray-300 rounded-md p-2"
-//         />
-//       </div>
-
-//       {/* Background Image / Video URL */}
-//       <div className="mb-4">
-//         <label className="block text-sm font-medium mb-1">
-//           Background Image / Video URL
-//         </label>
-//         <div className="w-full h-36 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center mb-2">
-//           <button
-//             type="button"
-//             className="bg-black text-white px-4 py-2 rounded-md"
-//             onClick={handleFileButtonClick}
-//           >
-//             Choose video
-//           </button>
-//           <input
-//             type="file"
-//             ref={fileInputRef}
-//             className="hidden"
-//             accept="video/*"
-//             // Add an onChange handler if needed to handle the selected file
-//             onChange={(e) => console.log(e.target.files[0])}
-//           />
-//         </div>
-//         <input
-//           type="text"
-//           placeholder="https://url.com/master.mp4"
-//           className="w-full border border-gray-300 rounded-md p-2"
-//         />
-//       </div>
-
-//       {/* Background Image */}
-//       <div className="mb-4">
-//         <label className="block text-sm font-medium mb-1">
-//           Background Image
-//         </label>
-//         <div className="w-full h-36 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center mb-2">
-//           <span className="text-gray-400">Image</span>
-//         </div>
-//         <input
-//           type="text"
-//           placeholder="https://url.com/image.jpg"
-//           className="w-full border border-gray-300 rounded-md p-2"
-//         />
-//       </div>
-
-//       {/* AI Intent */}
-//       <div className="mb-4">
-//         <label htmlFor="ai-intent" className="block text-sm font-medium mb-1">
-//           AI Intent
-//         </label>
-//         <input
-//           type="text"
-//           id="ai-intent"
-//           placeholder="eg. Pricing"
-//           className="w-full border border-gray-300 rounded-md p-2"
-//         />
-//       </div>
-
-//       {/* Wait time */}
-//       <div className="mb-4">
-//         <label htmlFor="wait-time" className="block text-sm font-medium mb-1">
-//           Wait time
-//         </label>
-//         <input
-//           type="text"
-//           id="wait-time"
-//           className="w-full border border-gray-300 rounded-md p-2"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default StatementForm;

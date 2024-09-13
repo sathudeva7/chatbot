@@ -1,6 +1,6 @@
 import { ArrowLeftIcon, PencilIcon, EyeIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import StatementForm from '../propities/statenment'; // Make sure this path is correct
+import StatementForm from '../propities/Statenment'; // Make sure this path is correct
 
 export default function CustomHeader() {
   // State to track button clicks
